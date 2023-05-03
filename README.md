@@ -14,4 +14,7 @@ Based on the pip module [homewizard-kitchen](https://github.com/lesleyxyz/python
 - ✅ Switch (On/Off, Keep Warm, Boil Before Target)
 
 # Installation
-HACS
+Recommended way:
+1. Install from HACS, add this repository as custom repository
+2. Search into HACS store the tapo integration and install
+3. Full restart of home assistant is recomended
