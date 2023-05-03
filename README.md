@@ -14,7 +14,13 @@ Based on the pip module [homewizard-kitchen](https://github.com/lesleyxyz/python
 - ✅ Switch (On/Off, Keep Warm, Boil Before Target)
 
 # Installation
-Recommended way:
+## Add to HACS
 1. Install from HACS, add this repository as custom repository
 2. Search into HACS store this integration and install
 3. Full restart of home assistant is recomended
+
+## Configure your device
+1. Goto the HomeAssistant Integration page and click "Add Integration"
+2. Search for "HomeWizard Kitchen Kettle"
+3. Enter your HomeWizard Kitchen credentials
+4. Select your Kettle & click done
