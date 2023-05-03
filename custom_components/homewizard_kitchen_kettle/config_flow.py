@@ -71,6 +71,10 @@ class HWKettleConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             if inspect.iscoroutinefunction(devices):
                 devices = await devices
 
+            if inspect.iscoroutine(devices):
+                devices = await devices
+
+            _LOGGER.debug(f"Got devices: {json.dumps(devices)}")
             kettle_ids = [d.get("identifier") for d in devices.get("devices", [])]
 
             if len(kettle_ids) == 0:
