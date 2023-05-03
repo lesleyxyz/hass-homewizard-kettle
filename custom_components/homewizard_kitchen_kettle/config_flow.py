@@ -3,9 +3,11 @@ import logging
 import re
 import secrets
 import traceback
+import inspect
 import sys
 import asyncio
 import subprocess
+import json
 import voluptuous as vol
 from homeassistant.const import *
 from homeassistant import config_entries
@@ -66,6 +68,9 @@ class HWKettleConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             ws_client = HWSocket(email, password)
 
             devices = await self.hass.async_add_executor_job(ws_client.get_devices)
+            if inspect.iscoroutinefunction(devices):
+                devices = await devices
+
             kettle_ids = [d.get("identifier") for d in devices.get("devices", [])]
 
             if len(kettle_ids) == 0:
