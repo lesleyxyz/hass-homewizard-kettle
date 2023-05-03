@@ -1,0 +1,14 @@
+{
+  "domain": "homewizard_kitchen_kettle",
+  "name": "HomeWizard Kitchen Kettle",
+  "version": "0.3",
+  "dependencies": [],
+  "requirements": [
+    "homewizard-kitchen==0.3.0"
+  ],
+  "codeowners": ["@lesleyxyz"],
+  "config_flow": true,
+  "iot_class": "local_push",
+  "documentation": "https://github.com/lesleyxyz/python-homewizard-kitchen/blob/master/README.md",
+  "issue_tracker": "https://github.com/lesleyxyz/python-homewizard-kitchen/issues"
+}
