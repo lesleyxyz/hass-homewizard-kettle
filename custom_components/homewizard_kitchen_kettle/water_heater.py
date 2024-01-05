@@ -76,7 +76,7 @@ class HWWaterHeater(CoordinatorEntity, WaterHeaterEntity):
 
     @property
     def temperature_unit(self):
-        return TEMP_CELSIUS
+        return UnitOfTemperature.CELSIUS
 
     @property
     def min_temp(self):
