@@ -1,10 +1,10 @@
 {
   "domain": "homewizard_kitchen_kettle",
   "name": "HomeWizard Kitchen Kettle",
-  "version": "0.5",
+  "version": "0.6",
   "dependencies": [],
   "requirements": [
-    "homewizard-kitchen==0.3.0"
+    "homewizard-kitchen==0.3.1"
   ],
   "codeowners": ["@lesleyxyz"],
   "config_flow": true,
