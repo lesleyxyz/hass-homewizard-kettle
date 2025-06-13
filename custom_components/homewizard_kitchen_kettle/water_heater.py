@@ -71,7 +71,8 @@ class HWWaterHeater(CoordinatorEntity, WaterHeaterEntity):
 
     @property
     def supported_features(self):
-        return WaterHeaterEntityFeature.TARGET_TEMPERATURE | WaterHeaterEntityFeature.OPERATION_MODE
+        return WaterHeaterEntityFeature.TARGET_TEMPERATURE | WaterHeaterEntityFeature.OPERATION_MODE | WaterHeaterEntityFeature.ON_OFF
+
 
     @property
     def temperature_unit(self):
