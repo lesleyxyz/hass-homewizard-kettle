@@ -1,9 +1,8 @@
 """HWWaterHeater."""
 import logging
 from homeassistant.components.water_heater import (
-    SUPPORT_OPERATION_MODE,
-    SUPPORT_TARGET_TEMPERATURE,
     WaterHeaterEntity,
+    WaterHeaterEntityFeature,
 )
 from homeassistant.helpers.dispatcher import async_dispatcher_send, async_dispatcher_connect
 from homeassistant.const import *
@@ -72,7 +71,7 @@ class HWWaterHeater(CoordinatorEntity, WaterHeaterEntity):
 
     @property
     def supported_features(self):
-        return SUPPORT_TARGET_TEMPERATURE | SUPPORT_OPERATION_MODE
+        return WaterHeaterEntityFeature.TARGET_TEMPERATURE | WaterHeaterEntityFeature.OPERATION_MODE
 
     @property
     def temperature_unit(self):
